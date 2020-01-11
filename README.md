@@ -23,7 +23,7 @@ Add maven  [https://jitpack.io](https://jitpack.io/)  to repositories
 
 Add the dependency
 
-    implementation 'com.github.buendiagon:epaycocheckout:1.0.1'
+    implementation 'com.github.buendiagon:epaycocheckout:1.0.0'
 ## Usage
 
     Authentication auth = new Authentication();
