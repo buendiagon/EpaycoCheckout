@@ -1,0 +1,46 @@
+<resources>
+
+    <style name="MaterialTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="materialAlertDialogTitleTextStyle">
+            @style/EpaycoMaterialAlertDialogTitleTextStyle
+        </item>
+        <item name="materialAlertDialogBodyTextStyle">
+            @style/EpaycoMaterialAlertDialogBodyTextStyle
+        </item>
+        <item name="android:theme">@style/MaterialMainTheme</item>
+    </style>
+
+    <style name="MaterialMainTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="buttonBarButtonStyle">@style/EpaycoMaterialButtonBarStyle</item>
+        <item name="buttonBarPositiveButtonStyle">
+            @style/EpaycoMaterialButtonBarPositiveButtonStyle
+        </item>
+        <item name="buttonBarNegativeButtonStyle">
+            @style/EpaycoMaterialButtonBarNegativeButtonStyle
+        </item>
+    </style>
+
+    <style name="EpaycoMaterialButtonBarStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog" />
+
+    <style name="EpaycoMaterialButtonBarPositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog" />
+
+    <style name="EpaycoMaterialButtonBarNegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog" />
+
+    <style name="EpaycoMaterialAlertDialogTitleTextStyle" parent="MaterialAlertDialog.MaterialComponents.Title.Text" />
+
+    <style name="EpaycoMaterialAlertDialogBodyTextStyle" parent="TextAppearance.MaterialComponents.Body1" />
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+</resources>

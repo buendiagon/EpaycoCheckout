@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">EpaycoCheckout</string>
+    <string name="epayco_public_key"></string>
+    <string name="epayco_private_key"></string>
+
+    <string name="invoice">Factura Test</string>
+    <string name="description">Descripcion de la factura</string>
+    <string name="value">30000</string>
+    <string name="country">CO</string>
+    <string name="city">City</string>
+    <string name="iva">0</string>
+    <string name="currency">COP</string>
+
+</resources>

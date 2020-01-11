@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/epayco_container_id_person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Spinner
+            android:id="@+id/epayco_spinner_doc_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="2"
+            android:background="@drawable/spinner_background"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/epayco_doc_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Número de Documento"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/epayco_name_person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Nombres"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/epayco_container_id_person" />
+
+    <EditText
+        android:id="@+id/epayco_last_name_person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Apellidos"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/epayco_name_person" />
+
+    <EditText
+        android:id="@+id/epayco_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="e-mail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/epayco_last_name_person" />
+
+    <LinearLayout
+        android:id="@+id/epayco_container_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/epayco_email">
+
+        <EditText
+            android:id="@+id/epayco_spinner_phone_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:background="@drawable/rounded_edittext"
+            android:drawableEnd="@drawable/ccp_down_arrow"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:hint="Código país"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/epayco_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Número de móvil"
+            android:inputType="phone" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

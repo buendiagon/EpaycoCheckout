@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/epayco_appbar"
+    style="@style/Widget.MaterialComponents.AppBarLayout.Surface"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/MaterialMainTheme">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/epayco_toolbar"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/epayco_appbar_menu"
+        app:navigationIcon="@null"
+        app:subtitleTextAppearance="@style/TextAppearance.MaterialComponents.Subtitle1">
+
+    </com.google.android.material.appbar.MaterialToolbar>
+</com.google.android.material.appbar.AppBarLayout>

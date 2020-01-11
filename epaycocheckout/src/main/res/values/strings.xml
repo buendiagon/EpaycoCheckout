@@ -1,0 +1,14 @@
+<resources>
+    <!--  Falabella y banco popular tiene problemas redirigiendo  -->
+    <string-array name="cuotas_items">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>12</item>
+        <item>24</item>
+        <item>36</item>
+    </string-array>
+</resources>

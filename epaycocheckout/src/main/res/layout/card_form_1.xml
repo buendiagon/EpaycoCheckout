@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/appbar_layout"
+        layout="@layout/app_bar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/epayco_textview_card_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Numero tarjeta:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/epayco_card_number"
+        app:layout_constraintTop_toBottomOf="@+id/appbar_layout" />
+
+    <EditText
+        android:id="@+id/epayco_card_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="**** **** **** ****"
+        android:inputType="number"
+        android:maxLength="20"
+        android:nextFocusDown="@id/epayco_expire_card"
+        app:layout_constraintTop_toBottomOf="@+id/epayco_textview_card_number" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/epayco_container_card_info"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/epayco_card_number">
+
+        <TextView
+            android:id="@+id/epayco_textview_expire_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expira:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/epayco_expire_card"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/epayco_expire_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:gravity="center"
+            android:hint="MM/AA"
+            android:inputType="date"
+            android:lines="1"
+            app:layout_constraintEnd_toStartOf="@+id/epayco_cvc"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/epayco_textview_expire_card" />
+
+
+        <TextView
+            android:id="@+id/epayco_textview_cvc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="CVC tarjeta:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/epayco_cvc"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/epayco_cvc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:gravity="center"
+            android:hint="CVC"
+            android:inputType="number"
+            android:lines="1"
+            app:layout_constraintEnd_toStartOf="@+id/epayco_spinner_dues"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/epayco_expire_card"
+            app:layout_constraintTop_toBottomOf="@+id/epayco_textview_cvc" />
+
+
+        <TextView
+            android:id="@+id/epayco_textview_spinner_dues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="Cuotas:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/epayco_spinner_dues"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/epayco_spinner_dues"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/spinner_background"
+            android:entries="@array/cuotas_items"
+            android:gravity="center"
+            android:spinnerMode="dropdown"
+            android:textAlignment="center"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/epayco_cvc"
+            app:layout_constraintTop_toBottomOf="@+id/epayco_textview_spinner_dues" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <CheckBox
+        android:id="@+id/epayco_checked_token_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Pago en un solo click"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/epayco_container_card_info"
+        app:useMaterialThemeColors="false" />
+
+
+    <Button
+        android:id="@+id/epayco_btn_pay_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_button"
+        android:text="Continuar"
+        android:textColor="@color/colorOnPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/epayco_checked_token_card" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

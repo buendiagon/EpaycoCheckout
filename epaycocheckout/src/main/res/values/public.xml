@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <public name="custom_card_form" type="layout"/>
+    <public name="custom_card_invoice" type="layout"/>
+    <public name="custom_cash_form" type="layout"/>
+    <public name="custom_pse_form" type="layout"/>
+    <public name="custom_response_cash" type="layout"/>
+    <public name="custom_select_method" type="layout"/>
+    <public name="basic_form_1" type="layout"/>
+    <public name="basic_form_2" type="layout"/>
+    <public name="app_bar" type="layout"/>
+    <public name="EpaycoMaterialButtonBarStyle" type="style"/>
+    <public name="EpaycoMaterialButtonBarPositiveButtonStyle" type="style"/>
+    <public name="EpaycoMaterialButtonBarNegativeButtonStyle" type="style"/>
+    <public name="EpaycoMaterialAlertDialogTitleTextStyle" type="style"/>
+    <public name="EpaycoMaterialAlertDialogBodyTextStyle" type="style"/>
+    <public name="cuotas_items" type="string"/>
+    <public name="AppTheme" type="style"/>
+    <public name="colorPrimary" type="color"/>
+    <public name="colorPrimaryDark" type="color"/>
+    <public name="colorAccent" type="color"/>
+    <public name="colorOnPrimary" type="color"/>
+    <public name="colorSurface" type="color"/>
+
+</resources>
